@@ -1,0 +1,15 @@
+spring: 
+  api: 
+    evaluate: 
+      context-path: /v1/bian-3/core/payment/creditor/10.0.0/fraudEvaluation/evaluate
+      hosturl: /evaluate
+      jolt-filename: evaluate806636-jolt.json
+    retrieve: 
+      context-path: /v1/bian-3/core/payment/creditor/10.0.0/fraudEvaluation/{fraudevalutionid}/retrieve
+      hosturl: /retrive
+      jolt-filename: retrieve759071-jolt.json
+  datasource: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: ${mysql_pwd}
+    url: jdbc:mysql://${mysql_url}:3306/camunda
+    username: ${mysql_user}
